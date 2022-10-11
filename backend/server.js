@@ -33,6 +33,14 @@ mongoose.connection.once("open", () => {
   console.log("MongoDB database connection established successfully");
 });
 
+// Router 연결
+const exercisesRouter = require("./routes/exercises");
+const usersRouter = require("./routes/users");
+
+// Router 사용
+// app.use("/exercises", exercisesRouter);
+app.use("/users", usersRouter);
+
 app.listen(port, () => {
   console.log(`server is running on port: ${port}`);
 });

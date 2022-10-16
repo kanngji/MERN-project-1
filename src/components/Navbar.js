@@ -5,25 +5,18 @@ import Nav from "react-bootstrap/Nav";
 export default function Navbar() {
   return (
     <>
-      <Nav
-        className="justify-content-center"
-        activeKey="/home"
-        onSelect={(selectedKey) => alert(`selected ${selectedKey}`)}
-      >
+      <Nav className="justify-content-center" activeKey="/home">
         <Nav.Item>
-          <Nav.Link href="/home">Home</Nav.Link>
+          <Nav.Link href="/">Home</Nav.Link>
         </Nav.Item>
         <Nav.Item>
-          <Nav.Link eventKey="link-1">Beverage</Nav.Link>
+          <Nav.Link href="/exercises">Exercises</Nav.Link>
         </Nav.Item>
         <Nav.Item>
-          <Nav.Link eventKey="link-2">Event</Nav.Link>
+          <Nav.Link href="/create">Create Exercise Log</Nav.Link>
         </Nav.Item>
         <Nav.Item>
-          <Nav.Link eventKey="link-3">Board</Nav.Link>
-        </Nav.Item>
-        <Nav.Item>
-          <Nav.Link eventKey="link-3">Store</Nav.Link>
+          <Nav.Link href="/user">Create User</Nav.Link>
         </Nav.Item>
       </Nav>
     </>

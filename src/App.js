@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import Navbar from "./components/Navbar";
@@ -21,17 +21,19 @@ const Main = styled.main`
 
 function App() {
   return (
-    <Router>
+    <>
       <Main>
         <Navbar />
       </Main>
 
       <br />
-      {/* <Route path="/" exact component={ExerciseList} />
-      <Route path="/edit:id" component={EditExercise} />
-      <Route path="/create" component={CreateExercise} />
-      <Route path="/user" component={CreateUser} /> */}
-    </Router>
+      <Routes>
+        <Route path="/" element={<ExerciseList></ExerciseList>} />
+        <Route path="/exercises" element={<EditExercise></EditExercise>} />
+        <Route path="/create" element={<CreateExercise></CreateExercise>} />
+        <Route path="/user" element={<CreateUser></CreateUser>} />
+      </Routes>
+    </>
   );
 }
 
